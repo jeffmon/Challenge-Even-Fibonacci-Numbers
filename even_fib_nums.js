@@ -7,9 +7,24 @@
  */
 function _sumFibs( maxFibValue ) {
   var sum = 0;
+  var num1 = 1;
+  var num2 = 2;
+  var num3 = 0;
+  var tempArr = [1, 2];
 
+  while(num1 <= maxFibValue && num2 <= maxFibValue && num3 <= maxFibValue){
+    num3 = num1 + num2;
+    num1 = num2 + num3;
+    num2 = num3 + num1;
+    tempArr.push(num3, num1, num2);
+  }
+
+  for(var i = 0; i < tempArr.length; i++){
+    if(tempArr[i] <= maxFibValue && tempArr[i] % 2 === 0){
+      sum += tempArr[i];
+    }
+  }
   // do your work here
-
   return sum;
 }
 
