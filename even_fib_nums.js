@@ -12,7 +12,7 @@ function _sumFibs( maxFibValue ) {
   var num3 = 0;
   var tempArr = [1, 2];
 
-  while(num1 <= maxFibValue && num2 <= maxFibValue && num3 <= maxFibValue){
+  while(num3 <= maxFibValue){
     num3 = num1 + num2;
     num1 = num2 + num3;
     num2 = num3 + num1;
